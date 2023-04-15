@@ -27,7 +27,7 @@ MonoBehaviour:
     openShoesType: 0
     price: 200
   - shoesName: "\u0411\u0430\u043D\u0434\u0438\u0442\u0441\u043A\u0438\u0435 \u0441\u0430\u043F\u043E\u0433\u0438"
-    prefab: {fileID: 3157318016194776033, guid: 458e42d7b8d81fe42b9df59fb28484cc, type: 3}
+    prefab: {fileID: 6679770872082644447, guid: 458e42d7b8d81fe42b9df59fb28484cc, type: 3}
     model: {fileID: 919132149155446097, guid: bcf01caa26d263643aa5fbfb093cf34e, type: 3}
     picture: {fileID: 21300000, guid: 1d666e8abc95d534abcd2e4103585db2, type: 3}
     openShoesType: 0
