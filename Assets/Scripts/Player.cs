@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public static Player instance;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private UnityEvent onPlayerDataLoad;
+    [SerializeField] private int addedMoney = 0;
     [SerializeField] private AllShoes allShoes;
 
     public PlayerData PlayerData
@@ -14,7 +15,7 @@ public class Player : MonoBehaviour
         {
             if (MoneyText.instance != null)
             {
-                MoneyText.instance.Text.text = playerData.Money.ToString();
+                MoneyText.instance.Text.text = (playerData.Money + addedMoney).ToString();
             }
             PlayerData.Save(playerData);
             return playerData;
@@ -26,7 +27,18 @@ public class Player : MonoBehaviour
             playerData = value;
         }
     }
+
     public AllShoes AllShoes { get => allShoes; set => allShoes = value; }
+
+    public int AddedMoney
+    {
+        get => addedMoney;
+        set
+        {
+            addedMoney = value;
+            MoneyText.instance.Text.text = (playerData.Money + AddedMoney).ToString();
+        }
+    }
 
     private void Awake()
     {
@@ -38,8 +50,8 @@ public class Player : MonoBehaviour
         else
         {
             PlayerData = PlayerData.GetPlayerData();
-            onPlayerDataLoad.Invoke();
         }
+        onPlayerDataLoad.Invoke();
         DontDestroyOnLoad(gameObject);
         instance = this;
     }
@@ -49,7 +61,7 @@ public class Player : MonoBehaviour
         InteractiveObject collidedInteractiveObject = other.GetComponent<InteractiveObject>();
         if (collidedInteractiveObject != null)
         {
-            collidedInteractiveObject.Action(this);
+            collidedInteractiveObject.Action();
         }
     }
 }

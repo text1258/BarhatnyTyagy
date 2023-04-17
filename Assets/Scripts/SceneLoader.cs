@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private Image asyncLoadProgressBar;
+    [SerializeField] private GameObject asyncLoadPanel;
+    [SerializeField] private Image loadProgressBar;
 
-    public IEnumerator AsyncLoadScene(int sceneIndex, Image progressBar = null)
+    public static IEnumerator AsyncLoadScene(int sceneIndex, Image progressBar = null)
     {
         AsyncOperation loadScene = SceneManager.LoadSceneAsync(sceneIndex);
         while (loadScene.isDone == false)
@@ -21,13 +22,15 @@ public class SceneLoader : MonoBehaviour
         yield break;
     }
 
-    public void LoadPlayerLevel()
+    public void LoadMainMenu()
     {
-       StartCoroutine(AsyncLoadScene(Player.instance.PlayerData.Level, asyncLoadProgressBar));
+        asyncLoadPanel.SetActive(true);
+        StartCoroutine(AsyncLoadScene(0, loadProgressBar));
     }
 
-    public static void RestartScene()
+    public void LoadPlayerLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        asyncLoadPanel.SetActive(true);
+        StartCoroutine(AsyncLoadScene(Player.instance.PlayerData.Level, loadProgressBar));
     }
 }

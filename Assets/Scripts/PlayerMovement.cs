@@ -4,7 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float sideSpeed;
-    
+    [SerializeField] private float shoesSkinScale;
+
     private Vector2 lastClickPosition = Vector2.zero;
     private float sideMoveDirection = 0;
     
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(Player.instance.AllShoes.Shoes[Player.instance.PlayerData.SelectedShoesIndex].Prefab, transform.position, transform.rotation, parent: transform);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetMouseButton(0))
         {
@@ -31,13 +32,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 sideMoveDirection = -1;
             }
-            lastClickPosition = Input.mousePosition;
         }
         else
         {
             sideMoveDirection = 0;
         }
         Vector3 forward = transform.TransformDirection(new Vector3(sideSpeed * sideMoveDirection, 0, forwardSpeed));
-        transform.position += forward * Time.fixedDeltaTime;
+        transform.position += forward * Time.deltaTime;
+        lastClickPosition = Input.mousePosition;
     }
 }
