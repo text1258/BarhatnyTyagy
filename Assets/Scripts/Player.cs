@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerData playerData;
     [SerializeField] private UnityEvent onPlayerDataLoad;
     [SerializeField] private int addedMoney = 0;
+    [SerializeField] private int maxMud;
+    [SerializeField] private int mudCount;
     [SerializeField] private AllShoes allShoes;
 
     public PlayerData PlayerData
@@ -20,7 +22,6 @@ public class Player : MonoBehaviour
             PlayerData.Save(playerData);
             return playerData;
         }
-
         set
         {
             PlayerData.Save(value);
@@ -39,6 +40,19 @@ public class Player : MonoBehaviour
             MoneyText.instance.Text.text = (playerData.Money + AddedMoney).ToString();
         }
     }
+
+    public int MaxMud => maxMud;
+
+    public int MudCount
+    {
+        get => mudCount; 
+        set
+        {
+            mudCount = value;
+            MudIndicator.instance.Indicator.fillAmount = (float)MudCount / (float)MaxMud;
+        }
+    }
+
 
     private void Awake()
     {

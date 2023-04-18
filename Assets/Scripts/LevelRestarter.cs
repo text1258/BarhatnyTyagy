@@ -15,7 +15,6 @@ public class LevelRestarter : InteractiveObject
         Player.instance.transform.GetChild(0).gameObject.SetActive(false);
         Player.instance.GetComponent<Rigidbody>().isKinematic = true;
         restartScreen.gameObject.SetActive(true);
-        MoneyText.instance.Text.text = Player.instance.PlayerData.Money.ToString();
         if (Player.instance.AddedMoney == 0)
         {
             addEarnedMoney.gameObject.SetActive(false);
