@@ -90,9 +90,9 @@ public class Finish : InteractiveObject
     {
         Player.instance.PlayerData.Money += Player.instance.AddedMoney;
         Player.instance.AddedMoney = 0;
-        if (Player.instance.PlayerData.Level + 1 < SceneManager.sceneCountInBuildSettings)
+        if (Player.instance.PlayerData.LevelIndex + 1 < SceneManager.sceneCountInBuildSettings)
         {
-            Player.instance.PlayerData.Level += 1;
+            Player.instance.PlayerData.LevelIndex += 1;
         }
         sceneLoader.LoadMainMenu();
 

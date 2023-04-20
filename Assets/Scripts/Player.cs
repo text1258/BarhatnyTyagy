@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    [SerializeField] private PlayerData playerData;
+    [SerializeField] private SavesYG playerData;
     [SerializeField] private UnityEvent onPlayerDataLoad;
     [SerializeField] private int addedMoney = 0;
     [SerializeField] private int maxMud;
     [SerializeField] private int mudCount;
     [SerializeField] private AllShoes allShoes;
 
-    public PlayerData PlayerData
+    public SavesYG PlayerData
     {
         get
         {
@@ -19,12 +20,12 @@ public class Player : MonoBehaviour
             {
                 MoneyText.instance.Text.text = (playerData.Money + addedMoney).ToString();
             }
-            PlayerData.Save(playerData);
+            YandexGame.SaveProgress();
             return playerData;
         }
         set
         {
-            PlayerData.Save(value);
+            YandexGame.SaveProgress();
             playerData = value;
         }
     }
@@ -52,7 +53,9 @@ public class Player : MonoBehaviour
             MudIndicator.instance.Indicator.fillAmount = (float)MudCount / (float)MaxMud;
         }
     }
+    private void OnEnable() => YandexGame.GetDataEvent += GetLoad;
 
+    private void OnDisable() => YandexGame.GetDataEvent -= GetLoad;
 
     private void Awake()
     {
@@ -60,22 +63,17 @@ public class Player : MonoBehaviour
         {
             PlayerData = instance.PlayerData;
             Destroy(instance.gameObject);
+            onPlayerDataLoad.Invoke();
         }
         else
         {
-            PlayerData = PlayerData.GetPlayerData();
+            if (YandexGame.SDKEnabled == true)
+            {
+                GetLoad();
+            }
         }
-        onPlayerDataLoad.Invoke();
         DontDestroyOnLoad(gameObject);
         instance = this;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.F))
-        {
-            PlayerData.Save(new PlayerData());
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -85,5 +83,10 @@ public class Player : MonoBehaviour
         {
             collidedInteractiveObject.Action();
         }
+    }
+    private void GetLoad()
+    {
+        playerData = YandexGame.savesData;
+        onPlayerDataLoad.Invoke();
     }
 }

@@ -31,6 +31,6 @@ public class SceneLoader : MonoBehaviour
     public void LoadPlayerLevel()
     {
         asyncLoadPanel.SetActive(true);
-        StartCoroutine(AsyncLoadScene(Player.instance.PlayerData.Level, loadProgressBar));
+        StartCoroutine(AsyncLoadScene(Player.instance.PlayerData.LevelIndex, loadProgressBar));
     }
 }
