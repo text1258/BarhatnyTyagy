@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 [System.Serializable]
@@ -15,6 +16,13 @@ public class PlayerData
     public List<int> OpenedShoesIndexes { get => openedShoesIndexes; set => openedShoesIndexes = value; }
     public int SelectedShoesIndex { get => selectedShoesIndex; set => selectedShoesIndex = value; }
 
+
+    [DllImport("__Internal")]
+    private static extern void SavePlayerData(string data);
+
+    [DllImport("__Internal")]
+    private static extern string LoadPlayerData();
+
     public static void Save(PlayerData savingData)
     {
 #if UNITY_EDITOR
@@ -22,6 +30,8 @@ public class PlayerData
 #elif UNITY_ANDROID
         PlayerPrefs.SetString("SavingData", JsonUtility.ToJson(savingData));
         PlayerPrefs.Save();
+#else
+        SavePlayerData(JsonUtility.ToJson(savingData));
 #endif
     }
 
@@ -37,9 +47,15 @@ public class PlayerData
             {
                 dataJson = PlayerPrefs.GetString("SavingData");
             }
+#else
+            dataJson = LoadPlayerData();
 #endif
         }
         catch { }
+        if (string.IsNullOrEmpty(dataJson))
+        {
+            dataJson = JsonUtility.ToJson(new PlayerData());
+        }
         return JsonUtility.FromJson<PlayerData>(dataJson);
     }
 }

@@ -32,7 +32,7 @@ public class ShoesSelectPanelCell : MonoBehaviour
         }
         else if (type == ShoeSelectPanelCellType.closedForAds)
         {
-            AdsShower.ShowRevardAds(OpenThisShoes);
+            AdsShower.instance.ShowRevardAds(OpenThisShoes);
         }
     }
 

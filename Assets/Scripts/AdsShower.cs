@@ -35,12 +35,13 @@ public class AdsShower : MonoBehaviour
         yield break;
     }
 
-    public static void ShowRevardAds(UnityAction reward)
+    public void ShowRevardAds(UnityAction reward)
     {
+        rewardAction = reward;
 #if UNITY_EDITOR || UNITY_ANDROID
         Debug.Log("ShowRewardAds");
-        rewardAction = reward;
 #endif
+        GetReward();
     }
 
     public void ShowFullscreenAds()

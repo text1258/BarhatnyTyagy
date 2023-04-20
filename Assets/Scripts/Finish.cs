@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,46 +34,48 @@ public class Finish : InteractiveObject
 
     public override void Action()
     {
+        Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.gameObject.SetActive(false);
         AdsShower.instance.ShowFullscreenAds();
         GetComponent<Collider>().enabled = false;
-        Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.transform.GetChild(0).gameObject.GetComponent<Animator>().enabled = false;
         Player.instance.gameObject.isStatic = true;
         Player.instance.GetComponent<PlayerMovement>().SideSpeed = 0;
         Player.instance.GetComponent<PlayerMovement>().ForwardSpeed = 0;
         Player.instance.GetComponent<Rigidbody>().isKinematic = true;
         scaleAdsFactor.text = $"×{earnedMoneyScaleAdsFactor}";
         maxScaleMudFactor.text = $"×{earnedMoneyScaleMudMaxFactor}";
-        Player.instance.GetComponent<Animator>().SetTrigger("CalculateMud");
         earningMoney.text = $"+{Player.instance.AddedMoney}";
         StartCoroutine(MudScaling());
     }
 
     private IEnumerator MudScaling()
     {
+        MudIndicator.instance.EnableCountingMode();
         float pastFilling = 0f;
         mudPanel.SetActive(true);
         mudScale.fillAmount = 0f;
-        finishPanel.enabled = false;
+        finishPanel.enabled = true;
         while (pastFilling < (float)Player.instance.MudCount / (float)Player.instance.MaxMud)
         {
             pastFilling += Time.deltaTime / mudScaleFilingTime;
             mudScale.fillAmount = pastFilling;
+            MudIndicator.instance.Indicator.fillAmount = 1 - pastFilling - (1 - (float)Player.instance.MudCount / (float)Player.instance.MaxMud);
             yield return null;
         }
         Player.instance.AddedMoney *= (int)(earnedMoneyScaleMudMaxFactor * ((float)Player.instance.MudCount / (float)Player.instance.MaxMud));
         earningMoney.text = $"+{Player.instance.AddedMoney}";
-        Player.instance.GetComponent<Animator>().SetTrigger("FinishPose");
         finishLevelButton.gameObject.SetActive(true);
         scaleAdsFactor.gameObject.SetActive(true);
         earningMoney.gameObject.SetActive(true);
-        scaleEarningMoneyButtonAds.gameObject.SetActive(true);
-        finishPanel.enabled = true;
+        if (Player.instance.AddedMoney > 0)
+        {
+            scaleEarningMoneyButtonAds.gameObject.SetActive(true);
+        }
         yield break;
     }
 
     public void ScaleEarnedMoney()
     {
-        AdsShower.ShowRevardAds(ScaleAddedMoney);
+        AdsShower.instance.ShowRevardAds(ScaleAddedMoney);
     }
 
     private void ScaleAddedMoney()

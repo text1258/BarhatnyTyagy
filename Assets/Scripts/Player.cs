@@ -70,6 +70,14 @@ public class Player : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            PlayerData.Save(new PlayerData());
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         InteractiveObject collidedInteractiveObject = other.GetComponent<InteractiveObject>();

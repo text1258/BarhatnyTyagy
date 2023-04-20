@@ -13,7 +13,7 @@ public class Shoe : MonoBehaviour
     {
         GameObject instatntiatedFootprint = Instantiate(footprint.gameObject, new Vector3(transform.position.x, transform.position.y + elevation, transform.position.z), transform.rotation);
         instatntiatedFootprint.transform.localScale = transform.lossyScale;
-        if (Physics.OverlapSphere(instatntiatedFootprint.transform.position, elevation * 2).Where(x => x.GetComponent<Track>() != null).ToList().Count == 0)
+        if (Physics.OverlapSphere(instatntiatedFootprint.transform.position, elevation * 4).Where(x => x.GetComponent<Track>() != null).ToList().Count == 0)
         {
             Destroy(instatntiatedFootprint);
         }
