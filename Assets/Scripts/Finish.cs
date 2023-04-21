@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,6 +19,7 @@ public class Finish : InteractiveObject
     [SerializeField] TMP_Text scaleAdsFactor;
     [SerializeField] TMP_Text maxScaleMudFactor;
     [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private UnityEvent onCalculate;
 
     private void OnValidate()
     {
@@ -34,8 +35,6 @@ public class Finish : InteractiveObject
 
     public override void Action()
     {
-        Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.gameObject.SetActive(false);
-        AdsShower.instance.ShowFullscreenAds();
         GetComponent<Collider>().enabled = false;
         Player.instance.gameObject.isStatic = true;
         Player.instance.GetComponent<PlayerMovement>().SideSpeed = 0;
@@ -44,11 +43,13 @@ public class Finish : InteractiveObject
         scaleAdsFactor.text = $"×{earnedMoneyScaleAdsFactor}";
         maxScaleMudFactor.text = $"×{earnedMoneyScaleMudMaxFactor}";
         earningMoney.text = $"+{Player.instance.AddedMoney}";
-        StartCoroutine(MudScaling());
+        StartCoroutine(MudCalculate());
     }
 
-    private IEnumerator MudScaling()
+    private IEnumerator MudCalculate()
     {
+        Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.SetActive(false);
+        onCalculate.Invoke();
         MudIndicator.instance.EnableCountingMode();
         float pastFilling = 0f;
         mudPanel.SetActive(true);
@@ -75,7 +76,7 @@ public class Finish : InteractiveObject
 
     public void ScaleEarnedMoney()
     {
-        AdsShower.instance.ShowRevardAds(ScaleAddedMoney);
+        RewardAdsShower.instance.ShowRevardAds(ScaleAddedMoney);
     }
 
     private void ScaleAddedMoney()

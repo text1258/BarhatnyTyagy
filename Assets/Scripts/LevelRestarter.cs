@@ -32,6 +32,6 @@ public class LevelRestarter : InteractiveObject
 
     public void GetEarnedMoney()
     {
-        AdsShower.instance.ShowRevardAds(() => Player.instance.PlayerData.Money += Player.instance.AddedMoney);
+        RewardAdsShower.instance.ShowRevardAds(() => Player.instance.PlayerData.Money += Player.instance.AddedMoney);
     }
 }

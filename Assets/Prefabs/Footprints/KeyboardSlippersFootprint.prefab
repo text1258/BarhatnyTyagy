@@ -96,3 +96,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7fe273cc7d1054c8858a10bf68649f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTime: 1
+  checkTrackRadius: 0.15
