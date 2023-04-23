@@ -18,7 +18,7 @@ public class MudIndicator : MonoBehaviour
 
     private void Start()
     {
-        Indicator.fillAmount = (float)Player.instance.MudCount / (float)Player.instance.MaxMud;
+        Indicator.fillAmount = Player.instance.MudFilling;
     }
     public void EnableCountingMode()
     {

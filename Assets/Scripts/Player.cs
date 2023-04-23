@@ -50,9 +50,12 @@ public class Player : MonoBehaviour
         set
         {
             mudCount = value;
-            MudIndicator.instance.Indicator.fillAmount = (float)MudCount / (float)MaxMud;
+            MudIndicator.instance.Indicator.fillAmount = MudFilling;
         }
     }
+
+    public float MudFilling => (float)mudCount / maxMud;
+
     private void OnEnable() => YandexGame.GetDataEvent += GetLoad;
 
     private void OnDisable() => YandexGame.GetDataEvent -= GetLoad;

@@ -55,14 +55,14 @@ public class Finish : InteractiveObject
         mudPanel.SetActive(true);
         mudScale.fillAmount = 0f;
         finishPanel.enabled = true;
-        while (pastFilling < (float)Player.instance.MudCount / (float)Player.instance.MaxMud)
+        while (pastFilling < Player.instance.MudFilling)
         {
-            pastFilling += Time.deltaTime / mudScaleFilingTime;
+            pastFilling += Time.deltaTime / (mudScaleFilingTime / Player.instance.MudFilling);
             mudScale.fillAmount = pastFilling;
-            MudIndicator.instance.Indicator.fillAmount = 1 - pastFilling - (1 - (float)Player.instance.MudCount / (float)Player.instance.MaxMud);
+            MudIndicator.instance.Indicator.fillAmount = 1 - pastFilling - (1 - Player.instance.MudFilling);
             yield return null;
         }
-        Player.instance.AddedMoney *= (int)(earnedMoneyScaleMudMaxFactor * ((float)Player.instance.MudCount / (float)Player.instance.MaxMud));
+        Player.instance.AddedMoney *= (int)(earnedMoneyScaleMudMaxFactor * (Player.instance.MudFilling));
         earningMoney.text = $"+{Player.instance.AddedMoney}";
         finishLevelButton.gameObject.SetActive(true);
         scaleAdsFactor.gameObject.SetActive(true);

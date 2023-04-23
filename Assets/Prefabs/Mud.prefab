@@ -5851,7 +5851,7 @@ Transform:
   m_GameObject: {fileID: 3957692902854370590}
   m_LocalRotation: {x: 0, y: 0.47452608, z: 0, w: 0.88024145}
   m_LocalPosition: {x: -0.21956387, y: 0.151, z: -0.64010787}
-  m_LocalScale: {x: 0.3, y: 0.294345, z: 0.25159135}
+  m_LocalScale: {x: 0.2451967, y: 0.1, z: 0.2403427}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1125646715906198039}
@@ -5878,7 +5878,7 @@ Transform:
   - {fileID: 1789294243427777262}
   - {fileID: 5113683286143135918}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 56.657, z: 0}
 --- !u!114 &296069838213202585
 MonoBehaviour:
@@ -5895,6 +5895,10 @@ MonoBehaviour:
   mudCount: 1
   footPrint: {fileID: 2100000, guid: 3fde75ca6090bf1458cd55e4a33e3756, type: 2}
   mudBubblesEffect: {fileID: 2050275204836306192}
+  rotateAngle: {x: 50, y: 270}
+  scaleX: {x: 0.2, y: 0.4}
+  scaleY: {x: 0.1, y: 0.1}
+  scaleZ: {x: 0.2, y: 0.4}
 --- !u!135 &1644947993075674787
 SphereCollider:
   m_ObjectHideFlags: 0
