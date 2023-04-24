@@ -27,7 +27,7 @@ public class Mud : InteractiveObject
     }
 
     [Button]
-    private void RandomizeRotatonAndScale()
+    public void RandomizeRotatonAndScale()
     {
         transform.rotation = Quaternion.Euler(0f, Random.Range(rotateAngle.x, rotateAngle.y), 0f);
         transform.localScale = new Vector3(Random.Range(scaleX.x, scaleX.y), Random.Range(scaleY.x, scaleY.y), Random.Range(scaleZ.x, scaleZ.y));

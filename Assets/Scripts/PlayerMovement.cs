@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using YG;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
     private float sideMoveDirection = 0;
     
     public float SideSpeed { get => sideSpeed; set => sideSpeed = value; }
+
     public float ForwardSpeed { get => forwardSpeed; set => forwardSpeed = value; }
+
     public GameObject ShoesSpawnPoint { get => shoesSpawnPoint; set => shoesSpawnPoint = value; }
 
     private void Start()
@@ -21,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
             Destroy(child.gameObject);
         }
         Instantiate(Player.instance.AllShoes.Shoes[Player.instance.PlayerData.SelectedShoesIndex].Prefab, ShoesSpawnPoint.transform.position, ShoesSpawnPoint.transform.rotation, parent: ShoesSpawnPoint.transform);
+        if (YandexGame.EnvironmentData.isDesktop)
+        {
+
+        }
     }
 
     private void Update()

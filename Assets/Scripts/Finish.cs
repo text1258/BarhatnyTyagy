@@ -49,7 +49,6 @@ public class Finish : InteractiveObject
     private IEnumerator MudCalculate()
     {
         Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.SetActive(false);
-        onCalculate.Invoke();
         MudIndicator.instance.EnableCountingMode();
         float pastFilling = 0f;
         mudPanel.SetActive(true);
@@ -62,6 +61,7 @@ public class Finish : InteractiveObject
             MudIndicator.instance.Indicator.fillAmount = 1 - pastFilling - (1 - Player.instance.MudFilling);
             yield return null;
         }
+        onCalculate.Invoke();
         Player.instance.AddedMoney *= (int)(earnedMoneyScaleMudMaxFactor * (Player.instance.MudFilling));
         earningMoney.text = $"+{Player.instance.AddedMoney}";
         finishLevelButton.gameObject.SetActive(true);

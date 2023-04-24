@@ -608,7 +608,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291518010}
-  m_LocalRotation: {x: 0.26394385, y: -3e-45, z: 1e-45, w: 0.96453804}
+  m_LocalRotation: {x: 0.26394385, y: 1e-45, z: 0, w: 0.96453804}
   m_LocalPosition: {x: 0, y: 6.1400003, z: -33.195667}
   m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 0
@@ -2459,7 +2459,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345156027}
-  m_LocalRotation: {x: 0.26394385, y: -3e-45, z: 1e-45, w: 0.96453804}
+  m_LocalRotation: {x: 0.26394385, y: 1e-45, z: 0, w: 0.96453804}
   m_LocalPosition: {x: 0, y: 6.1400003, z: -33.195667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2984,10 +2984,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fca36bd81de7c4cafce7bbf02ca611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 4
+  forwardSpeed: 4.5
   sideSpeed: 10
   shoesSkinScale: 0.7
   shoesSpawnPoint: {fileID: 2099651604}
+  minMoveClickDistanse: 4.5
 --- !u!114 &1830681057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,8 +3026,8 @@ Transform:
   m_GameObject: {fileID: 1830681054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0000006854534, z: -27.245667}
-  m_LocalScale: {x: 1, y: 1, z: 2.212464}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2099651605}
   m_Father: {fileID: 0}
