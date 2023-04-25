@@ -16,7 +16,7 @@ namespace YG
         // Можно удалить этот код, но тогда удалите и демо (папка Example)
 
         public int LevelIndex = 1;
-        public float Money = 1000;
+        public int Money = 0;
         public List<int> OpenedShoesIndexes = new List<int> { 0 };
         public int SelectedShoesIndex = 0;
 

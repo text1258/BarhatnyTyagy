@@ -37,6 +37,7 @@ public class Finish : InteractiveObject
     {
         GetComponent<Collider>().enabled = false;
         Player.instance.gameObject.isStatic = true;
+        Player.instance.transform.position = transform.position;
         Player.instance.GetComponent<PlayerMovement>().SideSpeed = 0;
         Player.instance.GetComponent<PlayerMovement>().ForwardSpeed = 0;
         Player.instance.GetComponent<Rigidbody>().isKinematic = true;
@@ -48,12 +49,10 @@ public class Finish : InteractiveObject
 
     private IEnumerator MudCalculate()
     {
-        Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.SetActive(false);
         MudIndicator.instance.EnableCountingMode();
         float pastFilling = 0f;
         mudPanel.SetActive(true);
         mudScale.fillAmount = 0f;
-        finishPanel.enabled = true;
         while (pastFilling < Player.instance.MudFilling)
         {
             pastFilling += Time.deltaTime / (mudScaleFilingTime / Player.instance.MudFilling);
@@ -62,6 +61,8 @@ public class Finish : InteractiveObject
             yield return null;
         }
         onCalculate.Invoke();
+        finishPanel.enabled = true;
+        Player.instance.GetComponent<PlayerMovement>().ShoesSpawnPoint.SetActive(false);
         Player.instance.AddedMoney *= (int)(earnedMoneyScaleMudMaxFactor * (Player.instance.MudFilling));
         earningMoney.text = $"+{Player.instance.AddedMoney}";
         finishLevelButton.gameObject.SetActive(true);
