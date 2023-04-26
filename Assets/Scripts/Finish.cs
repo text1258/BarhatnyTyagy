@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class Finish : InteractiveObject
 {
@@ -96,6 +97,7 @@ public class Finish : InteractiveObject
         {
             Player.instance.PlayerData.LevelIndex += 1;
         }
+        YandexGame.SaveProgress();
         sceneLoader.LoadMainMenu();
 
     }

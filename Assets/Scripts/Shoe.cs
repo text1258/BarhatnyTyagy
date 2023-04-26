@@ -10,7 +10,7 @@ public class Shoe : MonoBehaviour
 
     public void Inherit()
     {
-        GameObject instatntiatedFootprint = Instantiate(footprint.gameObject, new Vector3(transform.position.x, transform.position.y + elevation, transform.position.z), transform.rotation);
+        GameObject instatntiatedFootprint = Instantiate(footprint.gameObject, new Vector3(transform.position.x, elevation, transform.position.z), transform.rotation);
         instatntiatedFootprint.transform.localScale = transform.lossyScale;
     }
 }

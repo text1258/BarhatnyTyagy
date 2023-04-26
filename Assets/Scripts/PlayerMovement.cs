@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using YG;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,9 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sideSpeed;
     [SerializeField] private float shoesSkinScale;
     [SerializeField] private GameObject shoesSpawnPoint;
-
-    private Vector2 lastClickPosition = Vector2.zero;
-    private float sideMoveDirection = 0;
+    [SerializeField] private Joystick shoesMovementjoystick;
     
     public float SideSpeed { get => sideSpeed; set => sideSpeed = value; }
 
@@ -24,31 +21,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(child.gameObject);
         }
         Instantiate(Player.instance.AllShoes.Shoes[Player.instance.PlayerData.SelectedShoesIndex].Prefab, ShoesSpawnPoint.transform.position, ShoesSpawnPoint.transform.rotation, parent: ShoesSpawnPoint.transform);
-        if (YandexGame.EnvironmentData.isDesktop)
-        {
-
-        }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            if (Input.mousePosition.x > lastClickPosition.x)
-            {
-                sideMoveDirection = 1;
-            }
-            else if (Input.mousePosition.x < lastClickPosition.x)
-            {
-                sideMoveDirection = -1;
-            }
-        }
-        else
-        {
-            sideMoveDirection = 0;
-        }
-        Vector3 forward = transform.TransformDirection(new Vector3(SideSpeed * sideMoveDirection, 0, ForwardSpeed));
+        Vector3 forward = transform.TransformDirection(new Vector3(SideSpeed * shoesMovementjoystick.Horizontal, 0, ForwardSpeed));
         transform.position += forward * Time.deltaTime;
-        lastClickPosition = Input.mousePosition;
     }
 }

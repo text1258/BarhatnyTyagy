@@ -713,8 +713,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
+  near clip plane: 0.3
+  far clip plane: 40
   field of view: 60
   orthographic: 0
   orthographic size: 10
@@ -2906,6 +2906,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1589715396}
   - {fileID: 2010228849}
   - {fileID: 2113142359}
   - {fileID: 3668902}
@@ -3922,8 +3923,8 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 10
-    NearClipPlane: 0.1
-    FarClipPlane: 5000
+    NearClipPlane: 0.3
+    FarClipPlane: 40
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -4408,6 +4409,123 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5281112332883371530, guid: 308f12ebf3453434da30079d3580b8d5, type: 3}
   m_PrefabInstance: {fileID: 1587180811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1589715395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 930304038}
+    m_Modifications:
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864087953986993861, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+      propertyPath: m_Name
+      value: Shoes Joystick
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+--- !u!224 &1589715396 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3567797326851627272, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+  m_PrefabInstance: {fileID: 1589715395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589715397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 708009463755503441, guid: c6b79766e1d85204daf857f403138a47, type: 3}
+  m_PrefabInstance: {fileID: 1589715395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1591097707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5155,9 +5273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 4.5
-  sideSpeed: 9
+  sideSpeed: 15
   shoesSkinScale: 0.7
   shoesSpawnPoint: {fileID: 2099651604}
+  shoesMovementjoystick: {fileID: 1589715397}
 --- !u!114 &1830681057
 MonoBehaviour:
   m_ObjectHideFlags: 0

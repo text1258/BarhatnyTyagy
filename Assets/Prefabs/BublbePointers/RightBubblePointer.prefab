@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &11202215654407948
 RectTransform:
@@ -190,7 +190,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6152703102980168076
 Transform:
@@ -292,5 +292,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubblePointerType: 1
-  bonus: {fileID: 0}
   BubblePointerGroup: {fileID: 0}

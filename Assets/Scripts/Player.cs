@@ -20,14 +20,9 @@ public class Player : MonoBehaviour
             {
                 MoneyText.instance.Text.text = (playerData.Money + addedMoney).ToString();
             }
-            YandexGame.SaveProgress();
             return playerData;
         }
-        set
-        {
-            YandexGame.SaveProgress();
-            playerData = value;
-        }
+        set => playerData = value;
     }
 
     public AllShoes AllShoes { get => allShoes; set => allShoes = value; }

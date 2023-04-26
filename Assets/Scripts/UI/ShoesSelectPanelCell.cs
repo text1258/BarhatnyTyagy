@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class ShoesSelectPanelCell : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class ShoesSelectPanelCell : MonoBehaviour
         else if (type == ShoeSelectPanelCellType.closedForMoney & Player.instance.AllShoes.Shoes[IndexInAllShoes].Price <= Player.instance.PlayerData.Money)
         {
             Player.instance.PlayerData.Money -= Player.instance.AllShoes.Shoes[IndexInAllShoes].Price;
+            YandexGame.SaveProgress();
             OpenThisShoes();
         }
         else if (type == ShoeSelectPanelCellType.closedForAds)
@@ -40,11 +42,13 @@ public class ShoesSelectPanelCell : MonoBehaviour
     {
         ShoesDemonstration.instance.DemonstrationObject = Player.instance.AllShoes.Shoes[IndexInAllShoes].Model.transform;
         Player.instance.PlayerData.SelectedShoesIndex = IndexInAllShoes;
+        YandexGame.SaveProgress();
     }
 
     private void OpenThisShoes()
     {
         Player.instance.PlayerData.OpenedShoesIndexes.Add(IndexInAllShoes);
+        YandexGame.SaveProgress();
         SelectThisShoes();
         SetType();
     }
@@ -56,6 +60,7 @@ public class ShoesSelectPanelCell : MonoBehaviour
             type = ShoeSelectPanelCellType.opened;
             GetComponent<Image>().color = ShoesSelectPanel.instance.OpenedShoesBackgroundColor;
             priceText.text = "";
+            priceText.gameObject.SetActive(false);
             adsMark.gameObject.SetActive(false);
         }
         else
@@ -65,6 +70,7 @@ public class ShoesSelectPanelCell : MonoBehaviour
                 type = ShoeSelectPanelCellType.closedForMoney;
                 GetComponent<Image>().color = ShoesSelectPanel.instance.CloseForMoneyShoesBackgroundColor;
                 priceText.text = Player.instance.AllShoes.Shoes[IndexInAllShoes].Price.ToString();
+                priceText.gameObject.SetActive(true);
                 adsMark.gameObject.SetActive(false);
             }
             else if(Player.instance.AllShoes.Shoes[IndexInAllShoes].OpenShoesType == OpenShoesType.forAds)
@@ -72,6 +78,7 @@ public class ShoesSelectPanelCell : MonoBehaviour
                 type = ShoeSelectPanelCellType.closedForAds;
                 GetComponent<Image>().color = ShoesSelectPanel.instance.ClosForAdsShoesBackgroundColor;
                 priceText.text = "";
+                priceText.gameObject.SetActive(false);
                 adsMark.gameObject.SetActive(true);
             }
         }

@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class LevelRestarter : InteractiveObject
 {
@@ -32,6 +33,12 @@ public class LevelRestarter : InteractiveObject
 
     public void GetEarnedMoney()
     {
-        RewardAdsShower.instance.ShowRevardAds(() => Player.instance.PlayerData.Money += Player.instance.AddedMoney);
+        RewardAdsShower.instance.ShowRevardAds(GiveEarnedMoneyToPlayer);
+    }
+
+    private void GiveEarnedMoneyToPlayer()
+    {
+        Player.instance.PlayerData.Money += Player.instance.AddedMoney;
+        YandexGame.SaveProgress();
     }
 }
