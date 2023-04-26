@@ -740,7 +740,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291518010}
-  m_LocalRotation: {x: 0.26394385, y: -3e-45, z: 1e-45, w: 0.96453804}
+  m_LocalRotation: {x: 0.26394385, y: 1e-45, z: 0, w: 0.96453804}
   m_LocalPosition: {x: 0, y: 6.1400003, z: -33.195667}
   m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 0
@@ -3946,7 +3946,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345156027}
-  m_LocalRotation: {x: 0.26394385, y: -3e-45, z: 1e-45, w: 0.96453804}
+  m_LocalRotation: {x: 0.26394385, y: 1e-45, z: 0, w: 0.96453804}
   m_LocalPosition: {x: 0, y: 6.1400003, z: -33.195667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5273,7 +5273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 4.5
-  sideSpeed: 15
+  sideSpeed: 10
   shoesSkinScale: 0.7
   shoesSpawnPoint: {fileID: 2099651604}
   shoesMovementjoystick: {fileID: 1589715397}

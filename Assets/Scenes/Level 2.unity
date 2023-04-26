@@ -701,7 +701,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291518010}
-  m_LocalRotation: {x: 0.27374265, y: -0.000000016549151, z: 0.0000000047101207, w: 0.961803}
+  m_LocalRotation: {x: 0.27374265, y: 0.00000001654915, z: -0.0000000047101203, w: 0.961803}
   m_LocalPosition: {x: 0, y: 5.9400005, z: -16.266571}
   m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 0
@@ -2711,7 +2711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345156027}
-  m_LocalRotation: {x: 0.27374265, y: -0.000000016549151, z: 0.0000000047101207, w: 0.961803}
+  m_LocalRotation: {x: 0.27374265, y: 0.00000001654915, z: -0.0000000047101203, w: 0.961803}
   m_LocalPosition: {x: 0, y: 5.9400005, z: -16.266571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3560,7 +3560,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   addedMoney: 0
-  maxMud: 14
+  maxMud: 10
   mudCount: 0
   allShoes: {fileID: 11400000, guid: 9c55eed3703376e4e9b9e3276a26f658, type: 2}
 --- !u!4 &1830681060

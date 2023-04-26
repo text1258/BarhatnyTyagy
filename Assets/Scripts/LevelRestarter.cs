@@ -40,5 +40,6 @@ public class LevelRestarter : InteractiveObject
     {
         Player.instance.PlayerData.Money += Player.instance.AddedMoney;
         YandexGame.SaveProgress();
+        addEarnedMoney.gameObject.SetActive(false);
     }
 }
