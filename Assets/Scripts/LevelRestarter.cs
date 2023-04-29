@@ -26,11 +26,6 @@ public class LevelRestarter : InteractiveObject
         }
     }
 
-    public void RestartLevel()
-    {
-        sceneLoader.LoadPlayerLevel();
-    }
-
     public void GetEarnedMoney()
     {
         RewardAdsShower.instance.ShowRevardAds(GiveEarnedMoneyToPlayer);

@@ -1,10 +1,13 @@
 using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 
 
 public class Mud : InteractiveObject
 {
     [SerializeField] private int mudCount;
+    [SerializeField] private AudioSource mudAudioSource;
+    [SerializeField] private List<AudioClip> mudClips;
     [SerializeField] private Material footPrint;
     [SerializeField] private ParticleSystem mudBubblesEffect;
     [SerializeField, MinMaxSlider(0f, 360f)] private Vector2 rotateAngle;
@@ -14,6 +17,10 @@ public class Mud : InteractiveObject
 
     public override void Action()
     {
+        mudAudioSource.clip = mudClips[Random.Range(0, mudClips.Count)];
+        mudAudioSource.Play();
+        mudAudioSource.transform.SetParent(null);
+        Destroy(mudAudioSource.gameObject, 1);
         GetComponent<Collider>().enabled = false;
         mudBubblesEffect.Play();
         if (Player.instance.MudCount + mudCount > Player.instance.MaxMud)

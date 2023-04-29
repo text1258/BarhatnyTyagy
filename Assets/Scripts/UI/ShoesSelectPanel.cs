@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ShoesSelectPanel : MonoBehaviour
@@ -23,12 +25,13 @@ public class ShoesSelectPanel : MonoBehaviour
     {
         CreateSelectShoesCells();
     }
-
+    
     public void CreateSelectShoesCells()
     {
-        for (int i = 0; i < Player.instance.AllShoes.Shoes.Count; i++)
+        List<ShoesInfo> shoes = Player.instance.AllShoes.Shoes.OrderBy(x => x.IndexInSelectPanel).ToList();
+        for (int i = 0; i < shoes.Count; i++)
         {
-             Instantiate(cellPrefab, parent: scrollZone.content).GetComponent<ShoesSelectPanelCell>().IndexInAllShoes = i;
+             Instantiate(cellPrefab, parent: scrollZone.content).GetComponent<ShoesSelectPanelCell>().IndexInAllShoes = Player.instance.AllShoes.Shoes.IndexOf(shoes[i]);
         }
     }
 }

@@ -13,59 +13,75 @@ MonoBehaviour:
   m_Name: AllShoes
   m_EditorClassIdentifier: 
   shoes:
-  - shoesName: "\u0411\u0435\u043B\u044B\u0435 \u0442\u044F\u0433\u0438"
+  - indexInSelectPanel: 0
+    shoesName: "\u0411\u0435\u043B\u044B\u0435 \u0442\u044F\u0433\u0438"
     prefab: {fileID: 3912742294757708189, guid: 48148888bdda9dd448b491b111443f3d, type: 3}
     model: {fileID: 919132149155446097, guid: 8547f6514f52b3a4d8988d9152a25a7a, type: 3}
     picture: {fileID: 21300000, guid: da25f3b3347c465489cafa96972d2c18, type: 3}
     openShoesType: 0
     price: 0
-  - shoesName: "\u0413\u043D\u043E\u043C\u0441\u043A\u0438\u0435 \u0442\u044F\u0433\u0438"
+  - indexInSelectPanel: 1
+    shoesName: "\u0413\u043D\u043E\u043C\u0441\u043A\u0438\u0435 \u0442\u044F\u0433\u0438"
     prefab: {fileID: 1122417800454989053, guid: f6c690289a6221149b30fbc25629cd33, type: 3}
     model: {fileID: 919132149155446097, guid: 23c5c2afe6ec2b241971f8ec1797e39d, type: 3}
     picture: {fileID: 21300000, guid: d374aab5cbb690747b781b8dc6044f2c, type: 3}
     openShoesType: 0
     price: 750
-  - shoesName: "\u041A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u043D\u044B\u0435
+  - indexInSelectPanel: 2
+    shoesName: "\u041A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u043D\u044B\u0435
       \u043F\u043E\u0434\u043A\u0440\u043E\u0434\u0443\u043B\u0438"
     prefab: {fileID: 6827968919317050849, guid: 8414513ad5889024fadfe83ed78f5fc0, type: 3}
     model: {fileID: 919132149155446097, guid: 1b347cafc024e7247ba8194ad6adb87a, type: 3}
     picture: {fileID: 21300000, guid: 065c07d2164b615449eb4dfd7b0fdd88, type: 3}
     openShoesType: 1
     price: 1000
-  - shoesName: "\u041A\u0443\u0440\u0438\u043D\u044B\u0435 \u043F\u043E\u0434\u043A\u0440\u0430\u0434\u0443\u043B\u0438"
+  - indexInSelectPanel: 3
+    shoesName: "\u041A\u0443\u0440\u0438\u043D\u044B\u0435 \u043F\u043E\u0434\u043A\u0440\u0430\u0434\u0443\u043B\u0438"
     prefab: {fileID: 5664851890328916186, guid: 2e27c07efac06a34cabc3ba14f23f27a, type: 3}
     model: {fileID: 919132149155446097, guid: cbb300c0feef4ae42b073e68f4f940c0, type: 3}
     picture: {fileID: 21300000, guid: 29e1f7620ad96bc48b1926d17b56f4e1, type: 3}
     openShoesType: 0
     price: 900
-  - shoesName: "\u0411\u0430\u043D\u0430\u043D\u043E\u0432\u044B\u0435 \u0442\u044F\u0433\u0438"
+  - indexInSelectPanel: 4
+    shoesName: "\u0411\u0430\u043D\u0430\u043D\u043E\u0432\u044B\u0435 \u0442\u044F\u0433\u0438"
     prefab: {fileID: 3504406022349353711, guid: 69a35a7d4f0bdf040a99f877ba97eb2a, type: 3}
     model: {fileID: 919132149155446097, guid: f1fd0dcd7216eb84ca41c938c3ada3ff, type: 3}
     picture: {fileID: 21300000, guid: ce7bb40e0b36f8b45a56d7524b4681fd, type: 3}
     openShoesType: 0
     price: 1000
-  - shoesName: "\u041C\u0435\u0442\u0430\u043B\u043B\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+  - indexInSelectPanel: 6
+    shoesName: "\u041C\u0435\u0442\u0430\u043B\u043B\u0438\u0447\u0435\u0441\u043A\u0438\u0435
       \u043B\u0430\u0441\u0442\u044B \u043D\u0430 \u043A\u0430\u0431\u043B\u0443\u043A\u0430\u0445"
     prefab: {fileID: 7599374300217424535, guid: 5ee1ee5af91a16a4b822818ec8d916a0, type: 3}
     model: {fileID: 919132149155446097, guid: 253dd0a91ee0e3d42875136b2f67e25c, type: 3}
     picture: {fileID: 21300000, guid: 6e14860f042176c4ca41514273f5c4d0, type: 3}
     openShoesType: 0
     price: 1500
-  - shoesName: "\u0411\u0430\u043D\u0434\u0438\u0442\u0441\u043A\u0438\u0435 \u0441\u0430\u043F\u043E\u0433\u0438"
+  - indexInSelectPanel: 7
+    shoesName: "\u0411\u0430\u043D\u0434\u0438\u0442\u0441\u043A\u0438\u0435 \u0441\u0430\u043F\u043E\u0433\u0438"
     prefab: {fileID: 2089871373851896764, guid: 458e42d7b8d81fe42b9df59fb28484cc, type: 3}
     model: {fileID: 919132149155446097, guid: bcf01caa26d263643aa5fbfb093cf34e, type: 3}
     picture: {fileID: 21300000, guid: 1d666e8abc95d534abcd2e4103585db2, type: 3}
     openShoesType: 1
     price: 500
-  - shoesName: "\u041A\u0430\u043A\u0442\u0443\u0441\u043E\u0432\u044B\u0435 \u043A\u043E\u043D\u044C\u043A\u0438"
-    prefab: {fileID: 8345270703026309150, guid: c36900fc541726d45a12658d87baae33, type: 3}
-    model: {fileID: 919132149155446097, guid: 59512882d2c0c12439c7bc6c74144654, type: 3}
-    picture: {fileID: 21300000, guid: ed6df377191a64a4d9cf0412b728bdf1, type: 3}
-    openShoesType: 1
-    price: 4000
-  - shoesName: "\u0422\u0443\u0444\u043B\u0438 \u043C\u0435\u0440\u0441\u0435\u0434\u0435\u0441"
+  - indexInSelectPanel: 9
+    shoesName: "\u0422\u0443\u0444\u043B\u0438 \u043C\u0435\u0440\u0441\u0435\u0434\u0435\u0441"
     prefab: {fileID: 284904435017160379, guid: 39fb1deb49504554aaa0dd9b5de50cbf, type: 3}
     model: {fileID: 919132149155446097, guid: 5bac023ebec7f0247a6f435e05cca5c8, type: 3}
     picture: {fileID: 21300000, guid: 03a510988ed524743aecb076b5afaaf2, type: 3}
     openShoesType: 0
     price: 4000
+  - indexInSelectPanel: 8
+    shoesName: "\u041A\u0430\u043A\u0442\u0443\u0441\u043E\u0432\u044B\u0435 \u043A\u043E\u043D\u044C\u043A\u0438"
+    prefab: {fileID: 8345270703026309150, guid: c36900fc541726d45a12658d87baae33, type: 3}
+    model: {fileID: 919132149155446097, guid: 59512882d2c0c12439c7bc6c74144654, type: 3}
+    picture: {fileID: 21300000, guid: ed6df377191a64a4d9cf0412b728bdf1, type: 3}
+    openShoesType: 1
+    price: 4000
+  - indexInSelectPanel: 5
+    shoesName: "\u0422\u044F\u044F\u044F\u044F\u0433\u0438\u0438"
+    prefab: {fileID: 8301650017514395273, guid: d034901e7ac3cf748bc2ce2c7d59a73c, type: 3}
+    model: {fileID: 919132149155446097, guid: 4bccde994c331c44885b9e4453c20872, type: 3}
+    picture: {fileID: 21300000, guid: 46ae0272a7915f1478e335c9f53614e7, type: 3}
+    openShoesType: 0
+    price: 1500

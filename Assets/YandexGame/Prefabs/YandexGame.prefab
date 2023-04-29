@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2211564899198745196
 MonoBehaviour:
@@ -58,8 +58,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3061711959460121102}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
-        m_MethodName: SetTimeScale
-        m_Mode: 4
+        m_MethodName: Pause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -73,8 +73,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3061711959460121102}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
-        m_MethodName: SetTimeScale
-        m_Mode: 4
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -88,8 +88,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3061711959460121102}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
-        m_MethodName: SetTimeScale
-        m_Mode: 4
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

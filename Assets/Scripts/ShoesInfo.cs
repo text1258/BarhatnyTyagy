@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class ShoesInfo
 {
+    [SerializeField] private int indexInSelectPanel;
     [SerializeField] private string shoesName;
     [SerializeField] private GameObject prefab;
     [SerializeField] private GameObject model;
@@ -11,6 +12,7 @@ public class ShoesInfo
     [SerializeField] private OpenShoesType openShoesType;
     [ShowIf("openShoesType", OpenShoesType.forMoney), AllowNesting, SerializeField] int price;
 
+    public int IndexInSelectPanel { get => indexInSelectPanel; set => indexInSelectPanel = value; }
     public string ShoesName { get => shoesName; set => shoesName = value; }
     public GameObject Prefab { get => prefab; set => prefab = value; }
     public GameObject Model { get => model; set => model = value; }
