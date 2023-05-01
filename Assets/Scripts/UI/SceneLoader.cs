@@ -5,8 +5,14 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader instance;
     [SerializeField] private GameObject asyncLoadPanel;
     [SerializeField] private Image loadProgressBar;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public static IEnumerator AsyncLoadScene(int sceneIndex, Image progressBar = null)
     {

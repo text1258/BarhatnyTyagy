@@ -389,9 +389,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4650281796196978002}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadPlayerLevel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -547,13 +547,14 @@ GameObject:
   - component: {fileID: 2596268566932903460}
   - component: {fileID: 7553275880303150267}
   - component: {fileID: 6380530946885681527}
+  - component: {fileID: 2544831513296604899}
   m_Layer: 5
   m_Name: RestartScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2596268566932903460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -599,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -616,6 +617,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2544831513296604899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650281796196978002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c893ea02ce511264ab75c9b570ac59ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addEarnedMoney: {fileID: 5695718350469297695}
+  earnedMoney: {fileID: 4751475471526959565}
 --- !u!1 &6373292184904904356
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,9 +830,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LevelRestarter, Assembly-CSharp
-        m_MethodName: GetEarnedMoney
+      - m_Target: {fileID: 2544831513296604899}
+        m_TargetAssemblyTypeName: LevelResrarterPanel, Assembly-CSharp
+        m_MethodName: GetEarnedMoneyForAds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

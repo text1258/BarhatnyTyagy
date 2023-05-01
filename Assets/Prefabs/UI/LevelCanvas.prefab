@@ -31,14 +31,14 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2301981159748396323}
   - {fileID: 409912009838599496}
+  - {fileID: 7370754056838573671}
   - {fileID: 8772767187156510240}
+  - {fileID: 2301981159748396323}
   - {fileID: 7751545199188395332}
   - {fileID: 6113654824769904074}
   - {fileID: 7389781061172840616}
   - {fileID: 2511544797505977148}
-  - {fileID: 7370754056838573671}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -577,14 +577,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4883798457400994160}
     m_Modifications:
-    - target: {fileID: 1195320221715514296, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: MudScalePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1707707892783578626, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: ScaleEarnedMoney
-      objectReference: {fileID: 0}
     - target: {fileID: 2517455926724327894, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -669,29 +661,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3086734553887908224, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: 'MaxScaleMudFactor '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3118877740338937035, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: FinishLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3456060364583835863, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: ScaleFactor
-      objectReference: {fileID: 0}
     - target: {fileID: 5352731328923922437, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
       propertyPath: m_Name
       value: FinishPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5539088402452659925, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: MudScale
-      objectReference: {fileID: 0}
-    - target: {fileID: 6168055223242835492, guid: 66243800bcf9e694392b1ea4aa5c2fdf, type: 3}
-      propertyPath: m_Name
-      value: EarningMoney
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1026,10 +998,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: RestartScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 4650281796196978002, guid: 6e5cf0774a1c26845ac1623d08d250f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7536987631738347388, guid: 6e5cf0774a1c26845ac1623d08d250f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9147612194151785217}
+    - target: {fileID: 7536987631738347388, guid: 6e5cf0774a1c26845ac1623d08d250f2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadPlayerLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

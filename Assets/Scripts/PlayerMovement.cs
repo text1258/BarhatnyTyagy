@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float forwardSpeed;
@@ -11,11 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource stompAudioSource;
     [SerializeField] private List<AudioClip> stompClips;
 
-    public float SideSpeed { get => sideSpeed; set => sideSpeed = value; }
-
-    public float ForwardSpeed { get => forwardSpeed; set => forwardSpeed = value; }
+    private Rigidbody playerRigidbody;
 
     public GameObject ShoesSpawnPoint { get => shoesSpawnPoint; set => shoesSpawnPoint = value; }
+
+    private void Awake()
+    {
+        playerRigidbody = GetComponent<Rigidbody>();
+    }
 
     private void Start()
     {
@@ -26,15 +30,21 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(Player.instance.AllShoes.Shoes[Player.instance.PlayerData.SelectedShoesIndex].Prefab, ShoesSpawnPoint.transform.position, ShoesSpawnPoint.transform.rotation, parent: ShoesSpawnPoint.transform);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Vector3 forward = transform.TransformDirection(new Vector3(SideSpeed * shoesMovementjoystick.Horizontal, 0, ForwardSpeed));
-        transform.position += forward * Time.deltaTime;
+        Vector3 forward = transform.TransformDirection(new Vector3(sideSpeed * shoesMovementjoystick.Horizontal, 0, forwardSpeed));
+        playerRigidbody.MovePosition(transform.position + forward * Time.fixedDeltaTime);
     }
 
     public void PlayStompAudio()
     {
         stompAudioSource.clip = stompClips[Random.Range(0, stompClips.Count)];
         stompAudioSource.Play();
+    }
+
+    public void StopMovement()
+    {
+        sideSpeed = 0;
+        forwardSpeed = 0;
     }
 }
