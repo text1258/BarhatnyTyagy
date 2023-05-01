@@ -310,7 +310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5929148720028932382}
         m_TargetAssemblyTypeName: FinishPanel, Assembly-CSharp
-        m_MethodName: ScaleEarnedMoney
+        m_MethodName: ScaleEarnedMoneyForAds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -74,7 +74,7 @@ public class FinishPanel : MonoBehaviour
         yield break;
     }
 
-    public void ScaleEarnedMoney()
+    public void ScaleEarnedMoneyForAds()
     {
         RewardAdsShower.instance.ShowRevardAds(ScaleAddedMoney);
     }

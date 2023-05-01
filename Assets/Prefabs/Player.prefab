@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 4.5
-  sideSpeed: 10
+  sideSpeed: 11
   shoesSkinScale: 0.7
   shoesSpawnPoint: {fileID: 523623377322991445}
   shoesMovementjoystick: {fileID: 0}
@@ -149,7 +149,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &9089460539477781332
