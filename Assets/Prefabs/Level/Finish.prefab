@@ -45207,7 +45207,7 @@ Transform:
   m_Children:
   - {fileID: 1399064875572633443}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3775979528438924422
 MonoBehaviour:
@@ -45221,18 +45221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b16aba0f6999564fa4b950db7be8e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishPanel: {fileID: 0}
-  earnedMoneyScaleAdsFactor: 2
-  earnedMoneyScaleMudMaxFactor: 20
-  earningMoney: {fileID: 0}
-  finishLevelButton: {fileID: 0}
-  mudPanel: {fileID: 0}
-  mudScale: {fileID: 0}
-  mudScaleFilingTime: 4
-  scaleEarningMoneyButtonAds: {fileID: 0}
-  scaleAdsFactor: {fileID: 0}
-  maxScaleMudFactor: {fileID: 0}
-  sceneLoader: {fileID: 0}
   onCalculate:
     m_PersistentCalls:
       m_Calls:
@@ -45288,8 +45276,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 1.3289795, z: 1.1055702}
-  m_Center: {x: 0, y: 0.48134863, z: -0.15278512}
+  m_Size: {x: 6, y: 1.5, z: 1.2}
+  m_Center: {x: 0, y: 0.7, z: -0.1}
 --- !u!1 &8780544025326626198
 GameObject:
   m_ObjectHideFlags: 0

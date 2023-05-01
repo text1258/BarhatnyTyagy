@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SphereCollider))]
 public class Coin : InteractiveObject
 {
     [SerializeField] private int addedMoney;

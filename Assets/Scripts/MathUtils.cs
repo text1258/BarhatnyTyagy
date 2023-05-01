@@ -20,4 +20,14 @@ public class MathUtils
         }
         return bounds.size;
     }
+
+    public static Vector3 RandomVector(Vector3 startVector, Vector3 endVector)
+    {
+        return new Vector3(Random.Range(startVector.x, endVector.x), Random.Range(startVector.y, endVector.y), Random.Range(startVector.z, endVector.z));
+    }
+
+    public static Vector2 RandomVector(Vector2 startVector, Vector2 endVector)
+    {
+        return new Vector2(Random.Range(startVector.x, endVector.x), Random.Range(startVector.y, endVector.y));
+    }
 }

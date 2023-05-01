@@ -2,7 +2,7 @@ using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[RequireComponent(typeof(SphereCollider))]
 public class Mud : InteractiveObject
 {
     [SerializeField] private int mudCount;

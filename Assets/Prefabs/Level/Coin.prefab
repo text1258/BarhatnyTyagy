@@ -163,7 +163,7 @@ Transform:
   m_Children:
   - {fileID: 1985520856716856204}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3338963219076669587
 MeshFilter:
@@ -277,4 +277,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 1
-  m_Center: {x: 0, y: 1, z: 0.000000029802322}
+  m_Center: {x: 0, y: 1, z: 0}

@@ -1,6 +1,3 @@
 ﻿using UnityEngine;
 
-public class Track : MonoBehaviour
-{
-
-}
+public class Track : MonoBehaviour { }
