@@ -673,6 +673,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa5d7531663d3040933532b8e1d5f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stompAudioSource: {fileID: 0}
+  stompClips:
+  - {fileID: 8300000, guid: bb7d983394ee51a4a9e113fbcd9bbe22, type: 3}
+  - {fileID: 8300000, guid: a3ddec228f5b2344297c45ad2217fac8, type: 3}
+  - {fileID: 8300000, guid: fd60b82fc851fe24485db06e87ff1ba1, type: 3}
+  - {fileID: 8300000, guid: 20ca29e8a594be14192541d43754a5ae, type: 3}
+  - {fileID: 8300000, guid: 1ebd2da08f76d2745bd3145bf4669433, type: 3}
+  - {fileID: 8300000, guid: 337ecf6f6298d6946944a0c0a65d54ff, type: 3}
+  - {fileID: 8300000, guid: 1ee34ee63233d2142aa8c074f2b6e8a7, type: 3}
+  - {fileID: 8300000, guid: e2e8a78cd85eece43b5ed0fe5b92510e, type: 3}
+  - {fileID: 8300000, guid: 1ff68d128760b784c93d0a5d4308f082, type: 3}
+  - {fileID: 8300000, guid: e3115d0bb1f1a694cbedcc65711f0fd2, type: 3}
 --- !u!1 &4115071018346470905
 GameObject:
   m_ObjectHideFlags: 0

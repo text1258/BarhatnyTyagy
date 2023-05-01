@@ -9,10 +9,12 @@ public class PausePanel : MonoBehaviour
     [SerializeField] private Sprite playSprite;
     [SerializeField] private Button homeButton;
     [SerializeField] private Button restartButton;
+    [SerializeField] private AudioVolumeSwitcherButton audioVolumeSwitcherButton;
 
     [ContextMenu("PauseGame")]
     public void Pause()
     {
+        audioVolumeSwitcherButton.gameObject.SetActive(true);
         playPauseButton.image.sprite = playSprite;
         playPauseButton.onClick.RemoveAllListeners();
         playPauseButton.onClick.AddListener(Play);
@@ -25,6 +27,7 @@ public class PausePanel : MonoBehaviour
     [ContextMenu("PlayGame")]
     public void Play()
     {
+        audioVolumeSwitcherButton.gameObject.SetActive(false);
         playPauseButton.image.sprite = pauseSprite;
         playPauseButton.onClick.RemoveAllListeners();
         playPauseButton.onClick.AddListener(Pause);

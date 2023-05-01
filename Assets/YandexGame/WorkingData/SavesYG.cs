@@ -12,6 +12,8 @@ namespace YG
         public string language = "ru";
         public bool promptDone;
 
+        public bool isVolumeOn = true;
+
         // Тестовые сохранения для демо сцены
         // Можно удалить этот код, но тогда удалите и демо (папка Example)
 

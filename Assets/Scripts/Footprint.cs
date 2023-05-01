@@ -15,6 +15,10 @@ public class Footprint : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+            Player.instance.GetComponent<PlayerMovement>().PlayStompAudio();
+        }
         Destroy(gameObject, lifeTime);
     }
 }
