@@ -40,9 +40,9 @@ public class ShoesSelectPanelCell : MonoBehaviour
 
     private void SelectThisShoes()
     {
-        ShoesDemonstration.instance.DemonstrationObject = Player.instance.AllShoes.Shoes[IndexInAllShoes].Model.transform;
         Player.instance.PlayerData.SelectedShoesIndex = IndexInAllShoes;
         YandexGame.SaveProgress();
+        ShoesDemonstration.instance.DemonstrationObject = Player.instance.AllShoes.Shoes[IndexInAllShoes].Model.transform;
     }
 
     private void OpenThisShoes()

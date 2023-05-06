@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Footprint : MonoBehaviour
 {
-    [SerializeField] private float lifeTime = 1f;
     [SerializeField] private float checkTrackRadius = 0.15f;
+
+    private bool wasItVisible = false;
 
     private void Start()
     {
@@ -13,12 +14,24 @@ public class Footprint : MonoBehaviour
         GetComponent<Renderer>().material.color = footprintColor;
         if (Physics.OverlapSphere(transform.position, checkTrackRadius).Where(x => x.GetComponent<Track>() != null).ToList().Count == 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {
             Player.instance.GetComponent<PlayerMovement>().PlayStompAudio();
         }
-        Destroy(gameObject, lifeTime);
+    }
+
+    private void OnBecameVisible()
+    {
+        wasItVisible = true;
+    }
+
+    private void OnBecameInvisible()
+    {
+        if (wasItVisible == true)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

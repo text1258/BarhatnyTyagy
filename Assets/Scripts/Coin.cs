@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static Utils;
 
 [RequireComponent(typeof(SphereCollider))]
 public class Coin : InteractiveObject
@@ -13,8 +14,9 @@ public class Coin : InteractiveObject
         coinAudioSource.clip = coinClips[Random.Range(0, coinClips.Count)];
         coinAudioSource.Play();
         coinAudioSource.transform.SetParent(null);
-        Destroy(coinAudioSource.gameObject, 1);
+        StartCoroutine(DisactiveMediately(coinAudioSource.gameObject, 1));
         Player.instance.AddedMoney += addedMoney;
-        Destroy(gameObject);
+        StartCoroutine(DisactiveMediately(gameObject, 1));
+        gameObject.SetActive(false);
     }
 }

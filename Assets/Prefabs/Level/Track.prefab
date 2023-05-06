@@ -118,9 +118,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0657416e2b0c0a34099415c33f80fffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 8107547159203049470, guid: 8b4a159205c9220419c478bab5dbb3f6, type: 3}
-  mudPrefab: {fileID: 3957692902854370590, guid: 308f12ebf3453434da30079d3580b8d5, type: 3}
-  coinCount: 0
-  mudCount: 0
-  horizontalIndent: 1
-  verticalIndent: 1
+  level: {fileID: 0}
+  coinSpawnData:
+    prefab: {fileID: 8107547159203049470, guid: 8b4a159205c9220419c478bab5dbb3f6, type: 3}
+    count: 0
+  mudSpawnData:
+    prefab: {fileID: 3957692902854370590, guid: 308f12ebf3453434da30079d3580b8d5, type: 3}
+    count: 0
+  minimalDistance: 1
+  indent:
+    left: 1
+    right: 1
+    top: 4
+    bottom: 1

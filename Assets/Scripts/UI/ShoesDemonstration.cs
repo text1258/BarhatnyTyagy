@@ -18,14 +18,15 @@ public class ShoesDemonstration : MonoBehaviour, IPointerDownHandler, IPointerUp
         get => demonstrationObject; 
         set
         {
-            if (DemonstrationObject != null)
+            if (demonstrationObject != null)
             {
-                Destroy(DemonstrationObject.gameObject);
+                Destroy(demonstrationObject.gameObject);
+                demonstrationObject = null;
             }
             demonstrationObject = Instantiate(value.gameObject, parent: transform).transform;
             demonstrationObject.rotation = Quaternion.Euler(demonstrationObjectSpawnRotation);
             demonstrationObject.localPosition = demonstrationObjectSpawnPosition;
-            demonstrationObject.localScale = demonstrationObject.localScale * GetComponent<RectTransform>().rect.width / MathUtils.MaxBoundSideLength(demonstrationObject.gameObject);
+            demonstrationObject.localScale = GetComponent<RectTransform>().rect.width / Utils.MaxBoundSideLength(Player.instance.AllShoes.Shoes[Player.instance.PlayerData.SelectedShoesIndex].Model) * Player.instance.AllShoes.Shoes[Player.instance.PlayerData.SelectedShoesIndex].Model.transform.localScale;
         }
     }
 

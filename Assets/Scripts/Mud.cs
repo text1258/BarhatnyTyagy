@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
+using static Utils;
 
 [RequireComponent(typeof(SphereCollider))]
 public class Mud : InteractiveObject
@@ -20,7 +21,6 @@ public class Mud : InteractiveObject
         mudAudioSource.clip = mudClips[Random.Range(0, mudClips.Count)];
         mudAudioSource.Play();
         mudAudioSource.transform.SetParent(null);
-        Destroy(mudAudioSource.gameObject, 1);
         GetComponent<Collider>().enabled = false;
         mudBubblesEffect.Play();
         if (Player.instance.MudCount + mudCount > Player.instance.MaxMud)
@@ -31,6 +31,7 @@ public class Mud : InteractiveObject
         {
             Player.instance.MudCount += mudCount;
         }
+        StartCoroutine(DisactiveMediately(gameObject, 1));
     }
 
     [Button]
