@@ -894,7 +894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   earnedMoneyScaleAdsFactor: 2
-  earnedMoneyScaleMudMaxFactor: 20
+  earnedMoneyScaleMudMaxFactor: 10
   mudScaleFilingTime: 4
   finishPanel: {fileID: 6697721492108412117}
   earningMoney: {fileID: 6420708896199204778}

@@ -236,6 +236,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 869681369817b7d4cb7d38838a3b1ea8, type: 3}
   - {fileID: 8300000, guid: a6a8d1e5f8169214c9a4a4a5c6d72aa4, type: 3}
   - {fileID: 8300000, guid: e94812647dfee3641a9c0aee556bfd35, type: 3}
+  coinAnimator: {fileID: 729273974258572422}
 --- !u!95 &729273974258572422
 Animator:
   serializedVersion: 5
@@ -244,7 +245,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8107547159203049470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3286163eb36119e4ca70b8e1568b664e, type: 2}
   m_CullingMode: 0

@@ -34,8 +34,11 @@ public class Track : MonoBehaviour
     }
 
     public Transform Level { get => level; set => level = value; }
+
     public BonusSpawnData CoinSpawnData => coinSpawnData;
+
     public BonusSpawnData MudSpawnData => mudSpawnData;
+
 
     private void OnDrawGizmosSelected()
     {
@@ -83,8 +86,8 @@ public class Track : MonoBehaviour
                 remainingMudPrefabCount -= 1;
             }
             current.transform.position = new Vector3(Random.Range(transform.position.x - SpawnZoneLeftBottomPoint.x, transform.position.x + SpawnZoneTopRightPoint.x), current.transform.position.y, transform.position.z + currentSpawnPosition);
-            current.transform.SetParent(Level);
             current.GetComponent<Mud>()?.RandomizeRotatonAndScale();
+            current.transform.SetParent(Level);
         }
     }
 }

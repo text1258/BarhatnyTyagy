@@ -85,3 +85,11 @@ MonoBehaviour:
     picture: {fileID: 21300000, guid: 46ae0272a7915f1478e335c9f53614e7, type: 3}
     openShoesType: 0
     price: 1500
+  - indexInSelectPanel: 10
+    shoesName: "\u0413\u0430\u043B\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+      \u0422\u044F\u0433\u0438"
+    prefab: {fileID: 3439414632215558466, guid: d347df45ae6066541bf84be69eeb8c3e, type: 3}
+    model: {fileID: 919132149155446097, guid: d051ecc92ae6fd843a1ecc2c0953af37, type: 3}
+    picture: {fileID: 21300000, guid: c2ead93d06a5245498962930294ce41d, type: 3}
+    openShoesType: 0
+    price: 2000

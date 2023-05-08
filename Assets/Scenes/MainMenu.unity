@@ -1304,7 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca673766c593c74b9deb1aa6c45b954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedMoney: 900
+  addedMoney: 700
   addedMoneyText: {fileID: 1942582744}
 --- !u!1 &1332843753
 GameObject:
@@ -2100,7 +2100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +900
+  m_text: +700
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
