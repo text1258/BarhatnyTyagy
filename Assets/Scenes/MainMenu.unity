@@ -1058,9 +1058,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollZone: {fileID: 1627555589}
-  openedShoesBackgroundColor: {r: 0.216245, g: 0.709, b: 0.216245, a: 1}
-  closeForMoneyShoesBackgroundColor: {r: 0.922, g: 0.7907076, b: 0.28121, a: 1}
-  closForAdsShoesBackgroundColor: {r: 0.766, g: 0.20681998, b: 0.20681998, a: 1}
+  openedShoesBackgroundColor: {r: 0.35166043, g: 0.8773585, b: 0.26072446, a: 1}
+  closeForMoneyShoesBackgroundColor: {r: 1, g: 0.2627451, b: 0.23529412, a: 1}
+  closForAdsShoesBackgroundColor: {r: 1, g: 0.2627451, b: 0.23529413, a: 1}
   cellPrefab: {fileID: 8138227328900163124, guid: 7481f906669f76f4f82456faf5191d96, type: 3}
 --- !u!114 &1236524819
 MonoBehaviour:
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca673766c593c74b9deb1aa6c45b954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedMoney: 700
+  addedMoney: 150
   addedMoneyText: {fileID: 1942582744}
 --- !u!1 &1332843753
 GameObject:
@@ -2100,7 +2100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +700
+  m_text: +150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
